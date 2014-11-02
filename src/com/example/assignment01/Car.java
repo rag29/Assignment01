@@ -84,6 +84,10 @@ public class Car extends Activity {
 			return pictureURL;
 		}
 		
+		public String toString()
+		{
+			return make + "\n " + model + "\n " + year + "\n " + vin + "\n " + price + "\n " + pictureURL;
+		}
 		public double getTaxCredit(Car car)
 		{
 			
