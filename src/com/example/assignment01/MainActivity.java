@@ -89,7 +89,7 @@ public void onOption1(MenuItem i)
 
 public void onOption2(MenuItem i)
 {
-	/*
+	TextView tv = (TextView) findViewById(R.id.text_main);
 	// show the list in reverse order
 	CarList carList;
 	tv.setText("");
@@ -101,7 +101,7 @@ public void onOption2(MenuItem i)
 		tv.append(carList.get(m).toString() + '\n');
 	}
 	
-	*/
+	
 } // end onOption2
 
 public void onOption3(MenuItem i) //throws IOException
