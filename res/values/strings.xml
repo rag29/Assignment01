@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Assignment01</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_car">Car</string>
+    <string name="activity_main">Main Activity</string>
+    <string name="text_main">Main Text</string>
+    <string name="edit_item">Edit an Item</string>
+    <string name="text_main1">Main text 1</string>
+    <string name="edit_text1">Edit text 1</string>
+    <string name="image_load">Needed to load image</string>
+    <string name="image_load2">Needed to load image</string>
+    <string name="edit_position2">Edit position 2</string>
+    <string name="text_main3">Main text 3</string>
+    <string name="edit_file">Edit file for image</string>
+    <string name="text_main4">Main text 4</string>
+    <string name="text_main5">Main text 5</string>
+    <string name="text_main6">Main text 6</string>
+    <string name="edit_make">enter make</string>
+    <string name="edit_model">enter model</string>
+    <string name="edit_year">enter year</string>
+    <string name="edit_vin">enter vin</string>
+    <string name="edit_price">enter price</string>
+    <string name="edit_MPG">enter MPG</string>
+    <string name="edit_pictureURL">enter pictureURL</string>
+    <string name="title_activity_add">AddActivity</string>
+    <string name="button_add">Add Car</string>
+    <string name="image_thing">Add ImageURL</string>
+    <string name="edit_URL">enter URL</string>
+    <string name="title_activity_load">LoadActivity</string>
+    <string name="initial_message">LoadActivity</string>
+    <string name="title_activity_write_to_file">WriteToFileActivity</string>
+    <string name="edit_fileName">file name</string>
+    <string name="button_write">write to file</string>
+     <string name="button_load">load from file</string>
+	<string name="edit_outfile1">write to file</string>
+	<string name="text_status1">status</string>
+	<string name="edit_files">edit this file</string>
+	<string name="opt1">Option 1</string>
+	<string name="opt2">Option 2</string>
+	<string name="opt3">Option 3</string>
+	<string name="opt4">Option 4</string>
+	<string name="opt5">Option 5</string>
+	<string name="opt6">Option 6</string>
+	<string name="opt7">Option 7</string>
+	<string name="opt8">Option 8</string>
+	<string name="opt9">Option 9</string>
+	<string name="opt10">Option 10</string>
+	<string name="opt11">Option 11</string>
+	<string name="action_settings">action settings</string>
+	<string name="title_activity_car_list">activity car list</string>
+</resources>

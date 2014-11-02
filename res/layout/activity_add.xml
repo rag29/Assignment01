@@ -1,0 +1,65 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/edit_make"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/edit_make" />
+    
+    <EditText
+        android:id="@+id/edit_model"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:hint="@string/edit_model" />
+    
+    <EditText
+        android:id="@+id/edit_year"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:hint="@string/edit_year" />
+	    <EditText
+        android:id="@+id/edit_vin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="@string/edit_vin" />
+    
+    <EditText
+        android:id="@+id/edit_price"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:hint="@string/edit_price" />
+    
+    <EditText
+        android:id="@+id/edit_MPG"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:hint="@string/edit_MPG" />
+
+    <EditText
+        android:id="@+id/edit_pictureURL"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:inputType="number"
+        android:hint="@string/edit_pictureURL" />
+    
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="addItem"
+        android:text="@string/button_add" />
+    
+       <ImageView 
+        android:id="@+id/image_load2"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" />
+          
+</LinearLayout>
