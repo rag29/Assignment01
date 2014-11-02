@@ -106,16 +106,16 @@ public void onOption2(MenuItem i)
 
 public void onOption3(MenuItem i) //throws IOException
 {
-	/*
+	
    	// Start the activity to add a new item to the list
 	
 	startActivity(new Intent(this, AddActivity.class)); 
-	*/
+	
  
 }   
 public void onOption4(MenuItem i)
 {
-	/*
+	TextView tv = (TextView) findViewById(R.id.text_main);
 	CarList carList;
 	carList = CarList.getInstance();
    	// Show details of the car
@@ -162,42 +162,36 @@ public void onOption4(MenuItem i)
 		}
 	}
 	
-	*/
+	
 } // end onOption4
 
 public void onOption5(MenuItem i) throws Exception
 {
-	/*
+	
 	// Delete a car
 	CarList carList = CarList.getInstance(); 
-	Scanner scan = new Scanner(System.in);
+	//Scanner scan = new Scanner(System.in);
 
-	String vin = scan.next();
+	EditText editText2 = (EditText) findViewById(R.id.edit_position2);
 	
+	
+	String vin;
+	if(editText2.getText() != null)
+		vin = editText2.getText().toString();// = //scan.next();
+	else
+		vin = "";
 	for(int j = 0; j < carList.size(); j++)
 	{
 		try
 		{
-			if(vin == carList.get(j).getVin())
+			if(vin.equals( carList.get(j).getVin()))
 			{
-				EditText editText1;
-				EditText editText2;
-				String new_item;
-				int pos;
-				CarList the_list;
-				
-				editText2 = (EditText) findViewById(R.id.edit_position2);
-				pos = Integer.parseInt(editText2.getText().toString());
-				
-					// Get the string list instance
-				
-				the_list = CarList.getInstance();
-		
 					// try to put the new item on the list
 		
 					try
 					{
-					   the_list.remove(pos);
+					   carList.remove(j);
+					   break;
 				    
 					}
 					catch(IndexOutOfBoundsException e)
@@ -212,12 +206,12 @@ public void onOption5(MenuItem i) throws Exception
 			throw e;
 		}
 	} //ends for loop
-	*/
+
 } // end onOption5
 
 public void onOption6(MenuItem i)
 {
-	/*
+	
 	//Show average price of cars
 	CarList carList;
 	//To accomplish the task of this option, we:
@@ -237,12 +231,12 @@ public void onOption6(MenuItem i)
 			sum += carList.get(z).getPrice();
 		}
 		tv.append("Average price is: " + Double.toString(sum/z) + '\n'); 
-		*/
+		
 } // end onOption6
 
 public void onOption7(MenuItem i)
 {
-	/*
+	
 	//Show average MPG of cars
 	//Get the MPG from each car object in the list
 	//Average them
@@ -260,11 +254,11 @@ public void onOption7(MenuItem i)
 			sum += carList.get(y).getMPG();
 		}
 		tv.append("Average MPG is: " + Double.toString(sum/y) + '\n'); 
-       */
+       
 }//ends onOption7
 
 public void onOption8(MenuItem i)
-{       /*
+{       
 	//Show the price of the least expensive car
 	//Get all of the prices of the car objects in the list
 	//Compare them 
@@ -288,12 +282,12 @@ public void onOption8(MenuItem i)
 	}
 	tv.append("Lowest price is: " + Double.toString(least) + '\n'); 
 			
-	*/
+	
 } //ends onOption8
 
 public void onOption9(MenuItem i)
 {
-	/*
+	
 	//Show highest MPG
 	//Get all of the MPGs of the car objects in the list
 	//Compare them
@@ -316,7 +310,7 @@ public void onOption9(MenuItem i)
 		}
 	}
 	tv.append("Highest MPG is: " + Integer.toString(highest) + '\n'); 
-	*/
+	
 } //ends onOption9
 
 public void onOption10 (MenuItem i)
@@ -331,11 +325,11 @@ public void onOption10 (MenuItem i)
 
 public void onOption11 (MenuItem i)
 {
-	/*
+	
 	//Save list to file
 
 	startActivity(new Intent(this,WriteToFileActivity.class));
-	*/
+	
 } //ends onOption11
 
 

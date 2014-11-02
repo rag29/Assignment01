@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.os.StrictMode;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 
 
@@ -19,6 +20,9 @@ public class LoadActivity extends Activity
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_load);
+		EditText et1 = (EditText) findViewById(R.id.edit_files);
+		et1.setText("http://web.njit.edu/~halper/it114/a1dat.txt", TextView.BufferType.EDITABLE);
+		
 	}
 
 
