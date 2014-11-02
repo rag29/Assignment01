@@ -68,7 +68,7 @@ public class MainActivity extends Activity {
 	
 public void onOption1(MenuItem i)
 { 
-	/*
+	TextView tv = (TextView) findViewById(R.id.text_main);
 	CarList carList;
 	int j;
 	// get an instance of the list
@@ -84,7 +84,7 @@ public void onOption1(MenuItem i)
     	tv.append(carList.get(j).toString() + '\n');
 	}
 	
-	*/
+	
 } // end onOption1
 
 public void onOption2(MenuItem i)
@@ -321,12 +321,12 @@ public void onOption9(MenuItem i)
 
 public void onOption10 (MenuItem i)
 {
-	/*
+	
 	//Load list from file
 	
 	startActivity(new Intent(this,LoadActivity.class)); 
 	
-	*/
+	
 } //ends onOption10
 
 public void onOption11 (MenuItem i)
