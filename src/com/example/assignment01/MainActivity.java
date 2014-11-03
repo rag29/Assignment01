@@ -126,19 +126,21 @@ public void onOption4(MenuItem i)
 	
 	EditText et1 = (EditText) findViewById(R.id.edit_text1);
 	
-	Scanner scan = new Scanner(System.in);
 	
 	//Must retrieve car's vin from user and save it in vin variable
 	
-	String vin = scan.next(); 
-	
+	String vin;
+	if(et1.getText() != null)
+		vin = et1.getText().toString();
+	else
+		vin = "";
 	tv.setText("");
 	//check to see each car in the list
 	//if the vin belongs to a particular car,
 	//display all of the details of that car.
 	for(int j = 0; j < carList.size(); j++)
 	{
-		if(carList.get(j).getVin() == vin)
+		if(carList.get(j).getVin().equals(vin))
 		{
 			tv.append(carList.get(j).getMake().toString()+"\n"+"\n");
 			tv.append(carList.get(j).getModel().toString()+"\n"+"\n");
