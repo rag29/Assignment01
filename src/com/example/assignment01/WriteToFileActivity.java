@@ -67,15 +67,6 @@ public class WriteToFileActivity extends Activity
 			pw.println(Integer.toString(carList.get(j).getMPG())+"\n"+"\n");
 			pw.println(carList.get(j).getPictureURL().toString()+"\n"+"\n");
 			
-			try
-		    {
-				ImageView iv = (ImageView) findViewById(R.id.image_load);
-				// download and display the image in the ImageView
-				ImageDownloader idl = new ImageDownloader();
-				String image_url = carList.get(j).getPictureURL();
-				idl.download(image_url, iv);
-		    }catch(Exception e){}
-			
 		}
 		
 	}

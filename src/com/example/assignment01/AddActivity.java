@@ -49,19 +49,19 @@ public class AddActivity extends Activity
 		make = editText1.getText().toString();
 		
 		editText2 = (EditText) findViewById(R.id.edit_model);
-		model = editText1.getText().toString();
+		model = editText2.getText().toString();
 		
 		editText3 = (EditText) findViewById(R.id.edit_year);
-		year = Integer.parseInt(editText1.getText().toString());
+		year = Integer.parseInt(editText3.getText().toString());
 		
 		editText4 = (EditText) findViewById(R.id.edit_vin);
-		vin = editText1.getText().toString();
+		vin = editText4.getText().toString();
 		
 		editText5 = (EditText) findViewById(R.id.edit_price);
-		price = Double.parseDouble(editText1.getText().toString());
+		price = Double.parseDouble(editText5.getText().toString());
 		
 		editText6 = (EditText) findViewById(R.id.edit_MPG);
-		MPG = Integer.parseInt(editText1.getText().toString());
+		MPG = Integer.parseInt(editText6.getText().toString());
 		
 		editText7 = (EditText) findViewById(R.id.edit_pictureURL);
 		pictureURL = editText7.getText().toString();
@@ -69,11 +69,7 @@ public class AddActivity extends Activity
 		StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 		StrictMode.setThreadPolicy(policy);
 		
-		ImageView iv = (ImageView) findViewById(R.id.image_load2);
-		// download and display the image in the ImageView
-		ImageDownloader idl = new ImageDownloader();
-		String image_url = editText7.getText().toString();
-		idl.download(image_url, iv);
+		
 			
 		//add a bunch of car elements to the car object
 		// try to put the new item on the list
@@ -83,7 +79,7 @@ public class AddActivity extends Activity
 		
 		try
 		{
-	      carList.add(carList.size()-1, car);	
+	      carList.add(carList.size(), car);	
 
 		}
 		catch(IndexOutOfBoundsException e)
