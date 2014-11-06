@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
-    
+      
        <ScrollView            
         android:id="@+id/SCROLLER_ID"
         android:layout_width="fill_parent"
@@ -14,6 +14,7 @@
       <TextView android:id="@+id/text_main"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:hint="@string/text_main"
       />
       
       
@@ -46,10 +47,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
       />
-      
+      <!--  
       <EditText android:id="@+id/edit_text1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:labelFor="@+id/edit_text1"
+        android:inputType="text"
+        android:hint="@string/edit_text1"
        />
        
        <EditText android:id="@+id/edit_position2"
@@ -62,6 +66,8 @@
         android:id="@+id/image_load"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content" />
+       -->
+       
        
         
      

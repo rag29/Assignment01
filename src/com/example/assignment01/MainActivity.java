@@ -81,7 +81,7 @@ public void onOption1(MenuItem i)
 	tv.setText("");
     
     for(j = 0; j < carList.size(); j++)
-    	tv.append(carList.get(j).toString() + '\n');
+    	tv.append(carList.get(j).getMake() + " " + carList.get(j).getModel() + ", " + carList.get(j).getYear() + ", " + carList.get(j).getVin() + '\n');
 	}
 	
 	
@@ -115,6 +115,8 @@ public void onOption3(MenuItem i) //throws IOException
 }   
 public void onOption4(MenuItem i)
 {
+	startActivity(new Intent(this, DisplayActivity.class)); 
+	/*
 	TextView tv = (TextView) findViewById(R.id.text_main);
 	CarList carList;
 	carList = CarList.getInstance();
@@ -122,7 +124,7 @@ public void onOption4(MenuItem i)
 	// VIN is given by user 
 	// Edit text is needed to get the VIN from the user
 	// To display the car's details, we use a text view.
-	TextView tv1 = (TextView) findViewById(R.id.text_main1); 
+
 	
 	EditText et1 = (EditText) findViewById(R.id.edit_text1);
 	
@@ -142,16 +144,16 @@ public void onOption4(MenuItem i)
 	{
 		if(carList.get(j).getVin().equals(vin))
 		{
-			tv.append(carList.get(j).getMake().toString()+"\n"+"\n");
-			tv.append(carList.get(j).getModel().toString()+"\n"+"\n");
-			tv.append(Integer.toString(carList.get(j).getYear())+"\n"+"\n");
-			tv.append(carList.get(j).getVin().toString()+"\n"+"\n");
+			tv.append("Make: " + carList.get(j).getMake().toString()+"\n"+"\n");
+			tv.append("Model: " + carList.get(j).getModel().toString()+"\n"+"\n");
+			tv.append("Year: " + Integer.toString(carList.get(j).getYear())+"\n"+"\n");
+			tv.append("Vin: " + carList.get(j).getVin().toString()+"\n"+"\n");
 			if(carList.get(j).getPrice() != 0)
 			{
-				tv.append((Double.toString(carList.get(j).getPrice())+"\n"+"\n"));
+				tv.append(("Price: " + Double.toString(carList.get(j).getPrice())+"\n"+"\n"));
 			}
-			tv.append(Integer.toString(carList.get(j).getMPG())+"\n"+"\n");
-			tv.append(carList.get(j).getPictureURL().toString()+"\n"+"\n");
+			tv.append("MPG: " + Integer.toString(carList.get(j).getMPG())+"\n"+"\n");
+			tv.append("Picture URL" + carList.get(j).getPictureURL().toString()+"\n"+"\n");
 			
 			try
 		    {
@@ -164,12 +166,13 @@ public void onOption4(MenuItem i)
 		}
 	}
 	
-	
+	*/
 } // end onOption4
 
 public void onOption5(MenuItem i) throws Exception
 {
-	
+	startActivity(new Intent(this, RemoveActivity.class)); 
+	/*
 	// Delete a car
 	CarList carList = CarList.getInstance(); 
 	//Scanner scan = new Scanner(System.in);
@@ -208,7 +211,7 @@ public void onOption5(MenuItem i) throws Exception
 			throw e;
 		}
 	} //ends for loop
-
+*/
 } // end onOption5
 
 public void onOption6(MenuItem i)

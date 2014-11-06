@@ -58,7 +58,7 @@ public void loadCar(View view) throws IOException
 	
 	//String[] strings = new String[6];
 	CarList carList = CarList.getInstance();
-	
+	carList.clear();
 	String oneLine;
 	while(fsc.hasNext()) 
 	{

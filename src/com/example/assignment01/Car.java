@@ -88,12 +88,12 @@ public class Car extends Activity {
 		{
 			return make + "\n " + model + "\n " + year + "\n " + vin + "\n " + price + "\n " + pictureURL;
 		}
-		public double getTaxCredit(Car car)
+		public double getTaxCredit()
 		{
 			
-			if(car.getMPG() >= 35)
+			if(this.getMPG() >= 35)
 			{
-				double retVal = car.getPrice() * .03;
+				double retVal = this.getPrice() * .03;
 				return retVal;
 			}
 			else

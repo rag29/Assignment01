@@ -41,12 +41,18 @@
             android:name=".WriteToFileActivity"
             android:label="@string/title_activity_write_to_file" >
         </activity>
-         <activity
+        <activity
             android:name=".CarList"
             android:label="@string/title_activity_car_list" >
         </activity>
-      
-        
+        <activity
+            android:name=".DisplayActivity"
+            android:label="@string/title_activity_display" >
+        </activity>
+        <activity
+            android:name=".RemoveActivity"
+            android:label="@string/title_activity_remove" >
+        </activity>
     </application>
 
 </manifest>

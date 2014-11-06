@@ -29,21 +29,25 @@ public class WriteToFileActivity extends Activity
 	public void fileWrite(View view) throws java.io.IOException
 	{
 		EditText et1;  
-    
+		String outfilename;
         
         et1 = (EditText) findViewById(R.id.edit_outfile1); 
-      
+        if(et1.getText() != null)
         //name for output file
-        String outfilename = et1.getText().toString(); 
+        	outfilename = et1.getText().toString();
+        else
+        	outfilename = "";
          
         TextView tv = (TextView) findViewById(R.id.text_status1); 
         
         tv.append("Output file's name is: " + outfilename +"\n");
     	
-        //Important to use because infile is in assets folder
-        AssetManager assetManager = getAssets(); 
+   
         //opens infile and assigns it to fsc
-        Scanner fsc = new Scanner(assetManager.open(outfilename)); 
+        //read through the documentation tied to the AssetManager
+        //And looked up how in Android to open and write to an output file.
+        //NOT SCANNER?
+       
 		
         tv.append(""+getExternalFilesDir(null));
         
@@ -56,20 +60,22 @@ public class WriteToFileActivity extends Activity
 		//we write all of the info into our output file
 		for(int j = 0; j < carList.size(); j++)
 		{
-			pw.println(carList.get(j).getMake().toString()+"\n"+"\n");
-			pw.println(carList.get(j).getModel().toString()+"\n"+"\n");
-			pw.println(Integer.toString(carList.get(j).getYear())+"\n"+"\n");
-			pw.println(carList.get(j).getVin().toString()+"\n"+"\n");
-			if(carList.get(j).getPrice() != 0)
-			{
-				pw.println((Double.toString(carList.get(j).getPrice())+"\n"+"\n"));
-			}
-			pw.println(Integer.toString(carList.get(j).getMPG())+"\n"+"\n");
-			pw.println(carList.get(j).getPictureURL().toString()+"\n"+"\n");
+			pw.println(carList.get(j).getMake().toString()+"\n");
+			pw.println(carList.get(j).getModel().toString()+"\n");
+			pw.println(Integer.toString(carList.get(j).getYear())+"\n");
+			pw.println(carList.get(j).getVin().toString()+"\n");
+			
+			pw.println(Integer.toString(carList.get(j).getMPG())+"\n");
+			pw.println(carList.get(j).getPictureURL().toString()+"\n");
 			
 		}
 		
+		pw.close(); //closes the "writers"
+    	bw.close(); 
+    	fw.close();
+		
 	}
-
 }
+
+
 
